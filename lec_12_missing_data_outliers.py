@@ -1,4 +1,6 @@
-
+# Lecture 12: Data Cleaning with Mean Imputation and Outlier Handling
+# --------------------------------------------------------------------
+# Topics Covered:
 # 1. Creating dataset using Pandas
 # 2. Handling missing values using mean
 # 3. Handling unrealistic values using NumPy (np.where)
