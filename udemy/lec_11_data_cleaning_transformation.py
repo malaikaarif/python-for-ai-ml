@@ -66,6 +66,7 @@ print(cleaned_data)
 
 # -----------------------------------------
 # Save cleaned dataset to CSV file
+# CSV stands for: Comma-Separated Values
 
 cleaned_data.to_csv('cleaned_data.csv', index=False)
 
