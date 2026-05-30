@@ -86,3 +86,15 @@ print("Age: " + str(age))   # → "Age: 25"
 # 2. Floating point is never exact - never use == with floats in ML
 # 3. bool is subclass of int - True=1, False=0 (used in masking)
 # 4. Type errors are common bugs - always check types when debugging
+
+
+
+# You used this in Q8 but don't have it in notes
+print(f"Value is {mem_mb:.2f}")   # :.2f = 2 decimal places
+print(f"Value is {mem_mb:.4f}")   # :.4f = 4 decimal places
+print(f"Value is {mem_mb:.0f}")   # :.0f = whole number
+
+# Also useful in ML:
+epoch = 5
+loss = 0.324567
+print(f"Epoch {epoch}: loss = {loss:.4f}")  # → Epoch 5: loss = 0.3246
