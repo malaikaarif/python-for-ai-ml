@@ -15,7 +15,12 @@ print(2 ** 3)    # exponentiation → 8   (2 to the power 3)
 # / always returns float even if result is whole number
 print(10 / 2)    # → 5.0 NOT 5
 # // floors the result (rounds DOWN always)
+print(int(-3.5))   # → -3  (toward zero)
 print(-7 // 2)   # → -4 NOT -3 (floors toward negative infinity)
+
+
+
+
 
 # ===== 2. VARIABLES =====
 # Variable = a name that stores a value in memory
@@ -31,11 +36,22 @@ is_student = True # boolean
 # ❌ cannot use spaces → my var (wrong)
 # ❌ case sensitive → Name and name are DIFFERENT variables
 
+
+
+
+
+
+
 # ===== 3. DATA TYPES =====
 print(type(5))        # <class 'int'>
 print(type(2.5))      # <class 'float'>
 print(type("hello"))  # <class 'str'>
 print(type(True))     # <class 'bool'>
+
+
+
+
+
 
 # ===== 4. TYPE CONVERSION (not in DataCamp but CRITICAL) =====
 # Converting between types
@@ -47,11 +63,19 @@ print(bool(1))       # → True
 print(bool(""))      # → False (empty string is False)
 print(bool("hello")) # → True  (any non-empty string is True)
 
+
+
+
+
 # ===== 5. BOOLEAN TRICKS (critical for AI/ML) =====
 print(True + True)        # → 2  (True = 1, False = 0)
 print(True + False)       # → 1
 print(False * 5)          # → 0
 print(True + True + False * 5)  # → 2
+
+
+
+
 
 # ===== 6. FLOATING POINT TRAP ⚠️ =====
 # This is a famous bug that breaks ML models!
@@ -67,11 +91,18 @@ print(round(x, 1) == 0.3)  # → True
 # OR use numpy (you'll learn this in Chapter 4)
 # np.isclose(0.1 + 0.2, 0.3) → True
 
+
+
+
 # ===== 7. STRING OPERATIONS =====
 first = "Python"
 last = "rocks"
 print(first + " " + last)  # → "Python rocks" (concatenation)
 print(first * 3)            # → "PythonPythonPython" (repetition)
+
+
+
+
 
 # ===== 8. OPERATIONS WITH DIFFERENT TYPES =====
 # ❌ Cannot mix str and int
@@ -85,10 +116,10 @@ print("Age: " + str(age))   # → "Age: 25"
 # 1. / always gives float - important when working with arrays
 # 2. Floating point is never exact - never use == with floats in ML
 # 3. bool is subclass of int - True=1, False=0 (used in masking)
-# 4. Type errors are common bugs - always check types when debugging
+# 4. Type errors are common bugs - always check types when debugging ******
 
 
-
+mem_mb = 100    # assume only
 # You used this in Q8 but don't have it in notes
 print(f"Value is {mem_mb:.2f}")   # :.2f = 2 decimal places
 print(f"Value is {mem_mb:.4f}")   # :.4f = 4 decimal places

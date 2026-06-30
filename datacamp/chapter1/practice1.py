@@ -156,7 +156,7 @@ print(round(0.1+0.2,1))
 
 # Fix it using abs() - hint: abs(x - 0.3) < 0.0001
 if abs(x-0.3)<0.0001:
-    print("Model is good", x)
+    print("Model is good")
 
 
 
