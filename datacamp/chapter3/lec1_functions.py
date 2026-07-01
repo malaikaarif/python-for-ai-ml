@@ -176,3 +176,67 @@ print(pi)     # works, but messy - avoid this in real code!
 # ⚠️ Why avoid "import *"?
 # It pollutes your namespace - if math.py and numpy both have
 # a function called "sqrt", you won't know which one you're using!
+
+
+
+
+
+# # 1. sorted() vs .sort()
+nums = [3, 1, 2]
+sorted_nums = sorted(nums)  # returns NEW list, original unchanged
+nums.sort()                  # modifies IN PLACE, returns None
+
+# sorted() works on ANY iterable, .sort() only on lists
+print(sorted("malaika"))   # → ['a', 'a', 'a', 'i', 'k', 'l', 'm']
+
+
+
+
+
+# 2. str() and int() are also functions!
+print(str(99))      # → "99"
+print(int("99"))    # → 99
+print(float("3.14"))# → 3.14
+
+
+
+
+
+# 3. print() has extra arguments you didn't know!
+print("a", "b", "c")              # → a b c
+print("a", "b", "c", sep="-")     # → a-b-c
+print("a", "b", "c", sep="")      # → abc
+print("hello", end=" ")           # no newline at end!
+print("world")                     # → hello world (same line!)
+
+
+
+
+# 4. input() function (basic but useful)
+name = input("Enter your name: ")
+print(f"Hello {name}!")
+
+
+
+
+# 5. String method you missed - startswith/endswith
+filename = "model_weights.pkl"
+print(filename.endswith(".pkl"))    # → True (useful for file handling!)
+print(filename.startswith("model")) # → True
+
+
+
+
+
+# 6. join() - opposite of split() - VERY important in NLP!
+words = ["I", "love", "Python"]
+sentence = " ".join(words)          # → "I love Python"
+sentence2 = "-".join(words)         # → "I-love-Python"
+
+
+
+
+# sorted() vs .sort()
+# print(sep=, end=)
+# .join() — opposite of split, used everywhere in NLP
+# .endswith() and .startswith() — used in file handling
