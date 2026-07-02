@@ -157,10 +157,11 @@ print(name)        # what prints here?       malaika           strings are immut
 
 # Q9. Fix the import errors:
 # Error 1:
-numpy.array([1,2,3])    # missing something!
 
-import numpy as np
-np.array([1,2,3])
+# numpy.array([1,2,3])    # missing something!
+
+# import numpy as np
+# np.array([1,2,3])
 
 # or
 
@@ -168,12 +169,12 @@ from numpy import array as arr
 arr([1,2,3])
 
 # Error 2:
-from math import pi, sqrt
-print(math.pi)          # why is this wrong?     no need to write math.pi becoz we already imported pi library
+# from math import pi, sqrt
+# print(math.pi)          # why is this wrong?     no need to write math.pi becoz we already imported pi library
 
 # Error 3:
-import matplotlib.pyplot as plt
-plot([1,2,3])           # why is this wrong?            need to wrote plt.plot([1,2,3])
+# import matplotlib.pyplot as plt
+# plot([1,2,3])           # why is this wrong?            need to wrote plt.plot([1,2,3])
 
 
 
