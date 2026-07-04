@@ -21,6 +21,12 @@ print(np_heights + 2)    # → [3.73, 3.68, 3.71, 3.89] ✅
 # Neural networks = matrix multiplications on NumPy arrays
 # 50x faster than Python lists for math!
 
+
+
+
+
+
+
 # ===== 2. CREATING NUMPY ARRAYS =====
 # From list
 my_list = [1, 2, 3, 4, 5]
@@ -30,6 +36,12 @@ print(type(my_array))     # → <class 'numpy.ndarray'>
 
 # Directly
 arr = np.array([1.5, 2.5, 3.5])
+
+
+
+
+
+
 
 # ===== 3. NUMPY SIDE EFFECTS (TYPE COERCION) =====
 # NumPy arrays can only hold ONE data type!
@@ -55,6 +67,11 @@ print(arr4.dtype)          # → <U21
 # This is why you always check dtype before feeding data to ML model!
 # Model expects float32 but you accidentally have strings → model breaks!
 
+
+
+
+
+
 # ===== 4. NUMPY ARRAY OPERATIONS =====
 heights = np.array([1.73, 1.68, 1.71, 1.89, 1.79])
 weights = np.array([65.4, 59.2, 63.6, 88.4, 68.7])
@@ -69,6 +86,13 @@ print(bmi)                 # → [21.85, 20.97, 21.75, 24.75, 21.44]
 
 # ⚠️ This would be impossible with lists!
 # With lists you'd need a loop - with NumPy one line!
+
+
+
+
+
+
+
 
 # ===== 5. SUBSETTING NUMPY ARRAYS =====
 bmi = np.array([21.85, 20.97, 21.75, 24.75, 21.44])
@@ -87,6 +111,14 @@ print(bmi[bmi > 22])       # → [24.75] (only values where True!)
 # "Give me all samples where accuracy > 0.9"
 # accuracies[accuracies > 0.9]
 
+
+
+
+
+
+
+
+
 # ===== 6. 2D NUMPY ARRAYS =====
 # Like a matrix - rows and columns
 
@@ -98,6 +130,12 @@ np_2d = np.array([[1.73, 65.4],
 
 print(np_2d.shape)         # → (5, 2) = 5 rows, 2 columns
 print(np_2d.dtype)         # → float64
+
+
+
+
+
+
 
 # ===== 7. SUBSETTING 2D ARRAYS =====
 # np_2d[row, col]  OR  np_2d[row][col]
@@ -118,7 +156,14 @@ print(np_2d[0:2, 0:2])     # → first 2 rows, first 2 cols
 # X[0, :] → get ALL features for first sample
 # This notation is used EVERYWHERE in ML!
 
+
+
+
+
+
+
 # ===== 8. 2D ARITHMETIC =====
+import numpy as np
 np_mat = np.array([[1, 2],
                    [3, 4],
                    [5, 6]])
@@ -127,7 +172,15 @@ print(np_mat * 2)          # multiply every element by 2
 print(np_mat + np_mat)     # add matrices element-wise
 print(np_mat ** 2)         # square every element
 
+
+
+
+
+
+
+
 # ===== 9. NUMPY STATISTICS =====
+import numpy as np
 heights = np.array([1.73, 1.68, 1.71, 1.89, 1.79])
 weights = np.array([65.4, 59.2, 63.6, 88.4, 68.7])
 
@@ -148,6 +201,15 @@ print(np.mean(data))       # → 22.0  (affected by outlier!)
 print(np.median(data))     # → 3.0   (NOT affected by outlier!)
 # In ML: always check both! If mean >> median → outliers present!
 
+
+
+
+
+
+
+
+
+
 # ===== 10. SHAPE AND DTYPE - ALWAYS CHECK THESE! =====
 arr = np.array([[1, 2, 3],
                 [4, 5, 6]])
@@ -160,6 +222,12 @@ print(arr.ndim)            # → 2 (number of dimensions)
 # ⚠️ In ML debugging - first thing you always check:
 # print(X.shape)  → make sure data has right dimensions
 # print(X.dtype)  → make sure data is float not string
+
+
+
+
+
+
 
 # ===== KEY TAKEAWAYS FOR AI/ML =====
 # 1. NumPy arrays = single datatype only (check dtype!)
