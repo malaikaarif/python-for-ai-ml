@@ -417,3 +417,58 @@ normalized = (clean_prices - min_prices) / (max_prices - min_prices)
 # 6. Print: "Original mean: X | Clean mean: X | Difference: X"
 diff= abs(np.mean(clean_prices) - np.mean(prices))
 print(f"Original mean: {np.mean(prices):.0f} | Clean mean: {np.mean(clean_prices):.0f} | Difference: {diff:.0f}")
+
+
+
+
+
+
+
+
+# np.random.seed(42) explanation:
+
+# Every time you run np.random, it gives DIFFERENT random numbers
+# seed(42) fixes the randomness - everyone gets SAME numbers!
+np.random.seed(42)
+print(np.random.rand(3))  # → always [0.374, 0.951, 0.732]
+# Without seed → different numbers every run!
+
+# 42 is just a convention - you can use any number
+# Used in ML for REPRODUCIBILITY - same results every time!
+
+
+
+
+
+
+
+# When using np.random functions:
+np.random.rand(5)        # different every run!
+np.random.randint(0,100) # different every run!
+
+# With seed → same result every run:
+np.random.seed(42)
+np.random.rand(5)   # → always [0.374, 0.951, 0.732, 0.598, 0.156]
+
+
+
+
+
+
+# Splitting dataset randomly
+np.random.seed(42)
+np.random.shuffle(dataset)   # always shuffles same way!
+
+# Without seed → every run gives different train/test split
+# → your results change every time → not reproducible!
+
+
+
+
+# Use seed when → your code has np.random anywhere
+# Don't use seed when → data is fixed/hardcoded *************
+
+
+
+
+# In Q10 — fixed array, no randomness — no seed needed! 💡 ****************
