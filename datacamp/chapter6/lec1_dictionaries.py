@@ -3,6 +3,8 @@
 # Dictionaries & Pandas - COMPLETE NOTES
 # ============================================
 
+
+
 import pandas as pd
 import numpy as np
 
@@ -20,6 +22,19 @@ capitals = {"spain": "madrid",
             "germany": "berlin"}
 print(capitals["france"])  # → "paris" ✅ clean!
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ===== 2. DICTIONARY BASICS =====
 # Structure: {key: value, key: value}
 # Keys   → must be UNIQUE and IMMUTABLE (string, int, tuple)
@@ -30,6 +45,18 @@ person = {"name": "Malaika",
           "age": 22,
           "is_student": True,
           "scores": [85, 90, 92]}  # value can be a list!
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ===== 3. ACCESSING DICTIONARY =====
 print(person["name"])      # → "Malaika"
@@ -43,6 +70,18 @@ print("salary" in person)  # → False
 # print(person["salary"])  # → KeyError!
 # Safe way:
 print(person.get("salary", "Not found"))  # → "Not found"
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ===== 4. DICTIONARY MANIPULATION =====
 capitals = {"spain": "madrid", "france": "paris"}
@@ -59,6 +98,16 @@ print(capitals["spain"])  # → "MADRID"
 del capitals["france"]
 print(capitals)  # → {"spain":"MADRID","italy":"rome"}
 
+
+
+
+
+
+
+
+
+
+
 # ===== 5. DICTIONARY METHODS =====
 capitals = {"spain": "madrid", "france": "paris", "italy": "rome"}
 
@@ -69,6 +118,16 @@ print(capitals.items())   # → dict_items([('spain','madrid'),...])
 # Loop through dictionary
 for key, value in capitals.items():
     print(f"{key}: {value}")
+
+
+
+
+
+
+
+
+
+
 
 # ===== 6. NESTED DICTIONARIES =====
 # Dictionary inside dictionary!
@@ -94,11 +153,30 @@ config = {
 }
 print(config["training"]["lr"])   # → 0.001
 
+
+
+
+
+
+
+
+
+
 # ===== 7. PANDAS DATAFRAME =====
 # DataFrame = Excel spreadsheet in Python!
 # Rows = observations (samples)
 # Columns = features
 # Can hold MIXED data types!
+
+
+
+
+
+
+
+
+
+
 
 # ===== 8. CREATING DATAFRAMES =====
 
@@ -121,6 +199,16 @@ print(df)
 # df = pd.read_csv("data.csv")
 # df = pd.read_csv("data.csv", index_col=0)  # first col as index
 
+
+
+
+
+
+
+
+
+
+
 # ===== 9. DATAFRAME BASICS =====
 print(df.shape)     # → (4, 4) = 4 rows, 4 columns
 print(df.dtypes)    # → data types of each column
@@ -131,6 +219,17 @@ print(df.tail(2))   # → last 2 rows
 print(df.info())    # → summary (shape, dtypes, nulls)
 print(df.describe())# → stats (mean, std, min, max)
 
+
+
+
+
+
+
+
+
+
+
+
 # ===== 10. CUSTOM INDEX =====
 # Set custom row labels
 df.index = ["alice", "bob", "sara", "john"]
@@ -140,6 +239,17 @@ print(df)
 # bob      Bob   30   60000       LA
 # sara    Sara   22   45000      NYC
 # john    John   28   55000  Chicago
+
+
+
+
+
+
+
+
+
+
+
 
 # ===== 11. SQUARE BRACKETS - Column Selection =====
 
@@ -158,6 +268,15 @@ print(type(df[["name", "age"]])) # → pandas.DataFrame
 # Row selection with square brackets (slicing only!)
 print(df[0:2])    # → first 2 rows
 print(df[1:3])    # → rows 1 and 2
+
+
+
+
+
+
+
+
+
 
 # ===== 12. loc - LABEL BASED ACCESS =====
 # loc[row_label, col_label]
@@ -186,6 +305,16 @@ print(df.loc[:, ["name", "age"]])   # → name and age cols
 # Specific rows and columns
 print(df.loc["alice":"bob", "name":"age"])  # → 2x2 subset
 
+
+
+
+
+
+
+
+
+
+
 # ===== 13. iloc - INTEGER POSITION BASED =====
 # iloc[row_number, col_number]
 # EXCLUSIVE on end (like list slicing!)
@@ -208,6 +337,15 @@ print(df.iloc[:, 0])        # → first column
 # Specific rows and columns by position
 print(df.iloc[0:2, 0:2])    # → 2x2 subset
 
+
+
+
+
+
+
+
+
+
 # ===== 14. loc vs iloc SUMMARY =====
 # loc  → LABELS  → "alice", "name"  → INCLUSIVE end
 # iloc → NUMBERS → 0, 1, 2          → EXCLUSIVE end
@@ -219,6 +357,15 @@ print(df.iloc[0, 0])            # → "Alice" (by position)
 # ⚠️ When index is numbers (default 0,1,2...):
 # loc[0:2]  → rows 0, 1, 2 (INCLUSIVE - 3 rows!)
 # iloc[0:2] → rows 0, 1    (EXCLUSIVE - 2 rows!)
+
+
+
+
+
+
+
+
+
 
 # ===== 15. FILTERING DATAFRAME =====
 # Boolean filtering - like NumPy!
@@ -258,6 +405,14 @@ df = pd.read_csv("data.csv", index_col=0)
 # Without it → pandas adds 0,1,2 as index
 # ⚠️ Very common in real datasets!
 
+
+
+
+
+
+
+
+
 # 2. Series vs DataFrame - deeper explanation
 # Series = ONE column (1D)
 # DataFrame = MULTIPLE columns (2D)
@@ -275,6 +430,17 @@ print(df.shape)         # → (3, 1) = 2D!
 # df["col"]   → Series  (1D) → some functions don't accept this!
 # df[["col"]] → DataFrame (2D) → safer for ML pipelines!
 
+
+
+
+
+
+
+
+
+
+
+
 # 3. Printing specific rows with loc/iloc
 # DataCamp showed this but easy to miss:
 df = pd.read_csv("cars.csv", index_col=0)
@@ -285,12 +451,29 @@ print(df.iloc[0])        # → Series
 # Print first row as DataFrame
 print(df.iloc[[0]])      # → DataFrame (double brackets!)
 
+
+
+
+
+
+
+
+
 # 4. loc with boolean Series
 # Combining filtering with loc:
 is_expensive = df["salary"] > 50000
 print(df.loc[is_expensive])     # ← this is how DataCamp showed it!
 # Same as:
 print(df[df["salary"] > 50000]) # ← more common way
+
+
+
+
+
+
+
+
+
 
 # 5. Printing observations and variables
 # DataCamp used this terminology:
