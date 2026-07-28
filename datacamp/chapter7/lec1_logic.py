@@ -15,11 +15,16 @@ print("hello" == "hello")      # → True
 print("hello" == "Hello")      # → False (case-sensitive!)
 print(2 != 3)                  # → True
 
+
+
+
 # ----- Greater and less than -----
 print(3 < 5)     # → True
 print(3 <= 3)    # → True (<=, >= include "equal to")
 print(5 > 3)     # → True
 print(5 >= 5)    # → True
+
+
 
 # ⚠️ Comparing different types → TypeError!
 # print(3 < "4")   # ❌ TypeError: can't compare int and str
@@ -33,6 +38,10 @@ print(bmi > 21)
 # comparison to EVERY element → returns an array of booleans.
 # This is called "vectorized comparison" - the backbone of
 # data filtering in AI/ML.
+
+
+
+
 
 
 # ===== 2. BOOLEAN OPERATORS =====
@@ -97,6 +106,10 @@ else:
 # they would also be True.
 
 
+
+
+
+
 # ===== 4. FILTERING PANDAS DATAFRAMES =====
 # The real payoff - combining boolean logic + DataFrames!
 
@@ -140,6 +153,11 @@ print(medium2)
 # wrap each condition in its own parentheses.
 
 
+
+
+
+
+
 # ===== 5. BONUS: Not in this DataCamp chapter, but you'll need these =====
 # (These build directly on what you just learned)
 
@@ -149,15 +167,28 @@ age = 20
 status = "adult" if age >= 18 else "minor"
 print(status)   # → "adult"
 
+
+
+
+
 # ----- Chained comparisons (Python-only trick) -----
 z = 10
 print(5 < z < 15)   # → True (same as: 5 < z and z < 15)
+
+
+
+
 
 # ----- any() and all() -----
 # Useful when you have a boolean array/Series and want ONE final answer
 scores = np.array([45, 78, 92, 60, 88])
 print((scores > 70).any())   # → True  - "is at least one score > 70?"
 print((scores > 70).all())   # → False - "are ALL scores > 70?"
+
+
+
+
+
 
 # ----- .isin() - filter by a list of values (super common in real datasets) -----
 cars_subset = cars[cars["country"].isin(["US", "JPN", "EG"])]
